@@ -1,4 +1,6 @@
+# Example config.toml for Streamlit
+
 [server]
 headless = true
-enableCORS = false
-port = 
+enableCORS = true  # You can set this to true if needed
+port = 8501  # Specify a port number, e.g., 8501

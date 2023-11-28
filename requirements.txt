@@ -60,7 +60,6 @@ plotly==5.18.0
 protobuf==4.21.12
 pyarrow==14.0.1
 pyautogen==0.1.13
-pycairo==1.23.0
 pycodestyle==2.11.1
 pycparser==2.21
 pycryptodomex==3.19.0

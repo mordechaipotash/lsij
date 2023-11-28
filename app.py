@@ -19,6 +19,7 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
 # Define constants
 DATABASE_FILE = 'learning_platform.db'
 CSV_FILE = 'old_ls3.csv'
@@ -136,7 +137,6 @@ def display_content_for_day(selected_day, learned_days, df, user_id):
             # Use st.subheader for headings
             st.subheader(day_data[heading_key])
             st.markdown(day_data[paragraph_key], unsafe_allow_html=True)  # Keep paragraph text as-is
-
 
 # Function to mark a day as learned
 def mark_day_as_learned(learned_days, selected_day, user_id):

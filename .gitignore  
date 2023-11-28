@@ -1,0 +1,10 @@
+# Compiled python modules.
+*.pyc
+__pycache__/
+
+# Databases.
+*.db
+
+# CSV files.
+*.csv
+

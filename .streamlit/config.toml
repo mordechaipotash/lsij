@@ -4,3 +4,18 @@
 headless = true
 enableCORS = true  # You can set this to true if needed
 port = 8501  # Specify a port number, e.g., 8501
+
+[theme]
+primaryColor = "#FF5733"  # Change to your desired primary color
+backgroundColor = "#F0F0F0"  # Change to your desired background color
+secondaryBackgroundColor = "#EFEFEF"  # Change to your desired secondary background color
+textColor = "#121212"  # Change to your desired text color
+font = "sans-serif"  # Change to your desired font
+
+[customCSS]
+css = """
+    p {
+        background-color: #121212;  /* Light blue background color */
+        padding: 10px;  /* Add some padding for spacing */
+    }
+    """

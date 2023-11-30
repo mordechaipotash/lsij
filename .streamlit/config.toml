@@ -10,7 +10,8 @@ primaryColor = "#FF5733"  # Change to your desired primary color
 backgroundColor = "#F0F0F0"  # Change to your desired background color
 secondaryBackgroundColor = "#EFEFEF"  # Change to your desired secondary background color
 textColor = "#121212"  # Change to your desired text color
-font = "sans-serif"  # Change to your desired font
+font = "sans serif"  # Corrected font value
+
 
 [customCSS]
 css = """

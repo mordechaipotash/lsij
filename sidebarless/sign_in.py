@@ -1,7 +1,25 @@
 import streamlit as st
-from pages import signin_page  # Update the import statement
-from pages import progress_page
-from pages import daily_content_page
+from signin_page import sign_in_page
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+"""
+
+# Set the page configuration without "hide menu"
+st.set_page_config(
+    page_title="Learning Platform",
+    layout="wide",
+    menu_items={
+        'Get help': None,
+        'Report a bug': None,
+        'About': None
+    }
+)
+
+# Display the hide_streamlit_style
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # The very first command to set page configuration
 st.set_page_config(
@@ -14,24 +32,6 @@ st.set_page_config(
         'Hide menu': True,  # This hides the hamburger menu completely
     }
 )
-
-# Placeholder functions - replace with actual database and user management logic
-def initialize_db():
-    # Initialize your database or perform any setup here
-    pass
-
-def get_or_create_user(username):
-    # Check if the user exists in the database, and create if not
-    # Return the user's ID
-    pass
-
-def record_learned_day(user_id, day):
-    # Record that the user learned a specific day
-    pass
-
-def get_learned_days(user_id):
-    # Retrieve the days that the user has learned
-    pass
 
 # Main function for the Streamlit app
 def main():
@@ -71,3 +71,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+def return_to_home():
+    if st.button("Return to Home"):
+        st.session_state['page'] = 'home'
+        st.experimental_rerun()

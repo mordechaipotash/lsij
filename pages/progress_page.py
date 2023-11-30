@@ -2,6 +2,7 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 import datetime
+import random
 import plotly.express as px
 
 # Hide the Streamlit sidebar and hamburger menu
@@ -66,6 +67,18 @@ def progress_page():
     learned_days = get_learned_days(user_id)
     progress_stats = calculate_progress(learned_days)
 
+    # Set the background color for the entire Streamlit app
+    st.markdown(
+        f"""
+        <style>
+        body {{
+            background-color: grey;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
     st.title("Learning Progress Dashboard")
     
     col1, col2, col3 = st.columns(3)
@@ -116,7 +129,7 @@ def progress_page():
 
     st.plotly_chart(fig)
 
-    # Custom CSS to style the metrics grid
+    # Custom CSS to style the metrics grid and learned days list
     st.markdown(
         """
         <style>
@@ -138,6 +151,22 @@ def progress_page():
                 color: #1f77b4;
                 font-size: 36px;
                 margin: 0;
+            }
+            /* CSS for the learned days list */
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+            li {
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+            li::before {
+                content: "\\2022";
+                color: #1f77b4;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
             }
         </style>
         """,
